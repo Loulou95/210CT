@@ -29,3 +29,13 @@ def Sequence(integers):
       current_sequence = []
 
   print()
+  
+  print ('Finished. Longest found: ', longest_sequence)
+
+
+Sequence([1,2,3,4,5,1,2,4,5])
+
+print('\n----\n')
+
+Sequence([1,2,4,5,1,2,3,4,5])
+
