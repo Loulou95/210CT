@@ -1,0 +1,14 @@
+def binary_search(a, item):
+    a.sort()
+    mid = len(a)//2
+    if len(a) <= 1:
+        return a
+    else:
+        if a[mid] == item:
+            return item
+        elif item > a[mid]:
+            return binary_search(a[mid:], item)
+        else:
+            return binary_search(a[:mid], item)
+
+print (binary_search([3,6,7,3,2,1,4], 10))
