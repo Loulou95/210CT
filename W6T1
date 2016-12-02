@@ -1,0 +1,30 @@
+def find(tree,target): #function find passed to tree and target
+
+     r = tree #tree is passed to r (the root)
+
+     while r != None: #while tree r node exists loop until target node located
+
+         if r.value == target: #if value of r node is equal to target value
+
+             return r #return r
+
+         elif r.value > target: #elif r value greater than target node
+
+             r=r.left #r is moved to left
+
+         else: #else if the target is greater than r
+
+             r=r.right #r is moved right
+
+     return None # if no target, return none
+
+if __name__ == '__main__':#main method
+
+     x = find(t,target) #x will find the tree target
+     if x == None: #if x is not found
+
+         print ("no") #print no
+
+     else:
+
+         print ("yes") #else yes
