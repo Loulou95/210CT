@@ -1,21 +1,21 @@
-def highestPerfSquare(n):
-    x = 0
-    squares = []
-    if n > 0:
-        xy = x**2
-        while x < n :
-            xy = x**2
-            x += 1
-            squares.append(xy)
-            print(xy)
-    	
-    elif xy != n:
-        nhps = squares[-2]
-    
-        print ("%s is the next highest perfect square.." % nhps)
+import random
+def fun(B):
+
+    squarelist =[]
+    a=1
+    for i in range(B):
+            s=a**2
+            a=a+1
+            if s<=B:
+                squarelist.append(s)
+                highestperfect = squarelist[len(squarelist)-1]
 
     else:
-        print ("%s is a perfect square" % xy) 
 
-n = 26
-highestPerfSquare(n)
+
+            pass
+    return highestperfect
+
+B=int(input("Enter a number"))
+print (fun(B))
+
