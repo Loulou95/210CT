@@ -1,0 +1,37 @@
+class Graph(object): #class graph
+
+    def __init__(self,graph = {}): 
+
+         self.graph = graph
+
+    def Vertice(self):	
+        return "Vertices - " , (list(self.graph.keys()))
+
+    def Edge(self): 	
+
+        return "Edges - " , (list(self.graph.values()))
+
+    def Graph(self): 
+    
+        for key, value in self.graph.items():
+
+            print (key, value)
+
+    def startVertex(self, vertex): 
+
+        if vertex not in self.graph.keys(): 
+             self.graph[vertex] = []
+
+    def startEdge(self, startVertex, destVertex):  
+
+
+        if startVertex in self.graph.keys():
+
+            self.graph[startVertex].append(destVertex)
+
+    def findPath(self, start, end, path = []):	#method to find path checks the path of
+
+#edges from the vertex for the path
+
+     graph = self.graph
+     path = path + [start]
